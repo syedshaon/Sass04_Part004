@@ -140,19 +140,112 @@ main {
 	div.parent {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-column-gap: 2%;
+		grid-column-gap: 1%;
 		grid-row-gap: .5rem;
 	}
-	div.parent article{
+
+	div.parent article {
 		background-color: #eee;
+		padding:5px;
 	}
-	div.parent article:nth-child(1){
+
+	div.parent article:nth-child(1) {
 		grid-column: 1/span 2;
+		 -ms-grid-column: 1;
+		 -ms-grid-column-span: 2;
 		background-color: $secondaryColor;
 	}
+	div.parent article:nth-child(2) {
+		-ms-grid-row: 2;
+		-ms-grid-column: 1;
+		background-color: rgb(143, 156, 85);
+	}
+	div.parent article:nth-child(3) {
+		-ms-grid-row: 2;
+		-ms-grid-column: 2;
+		background-color: rgb(85, 168, 127);
+	}
+	div.parent article:nth-child(4) {
+		-ms-grid-row: 3;
+		-ms-grid-column: 1;
+		background-color: rgb(73, 95, 124);
+	}
+	div.parent article:nth-child(5) {
+		-ms-grid-row: 3;
+		-ms-grid-column: 2;
+		background-color: rgb(95, 111, 165);
+	}
+	div.parent article:nth-child(6) {
+		-ms-grid-row: 4;
+		-ms-grid-column: 1;
+		background-color: rgb(122, 149, 153);
+	}
+	div.parent article:nth-child(7) {
+		-ms-grid-row: 4;
+		-ms-grid-column: 2;
+		background-color: rgb(43, 74, 78);
+	}
+	div.parent article:nth-child(8) {
+		-ms-grid-row: 5;
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 2;
+		background-color: rgb(71, 119, 126);
+	}
 
+	.gallery {
+		margin-top: 50px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+		div.teaser {
+			position: relative;
+			padding:5px;
+		}
+		div.teaser span{
+			position: absolute;
+			display:block;
+			bottom: 0;
+			background-color: rgba(0,0,0,.3);
+			width:100%;
+			font-size: 1.4rem;
+			color: white;
+		}
+		div.teaser img {
+			display: block;
+			width:100%;
+		}
 
+		div.lead{
+			grid-row:1;
+			grid-column: 1 / span 2; 
+		}
 
+		div.secondTop {
+			grid-row:2;
+			grid-column: 1 / span 2;
+		}
+		div.secondBottom {
+			grid-row: 3;
+			grid-column: 1 / span 2;
+		}
+		div.ie1{
+			 -ms-grid-column: 1;
+			 -ms-grid-row: 4;
+		}
+		div.ie2 {
+			-ms-grid-column: 2;
+			-ms-grid-row: 4;
+		}
+		div.ie3 {
+			-ms-grid-column: 1;
+			-ms-grid-row: 5;
+		}
+		div.ie4 {
+			-ms-grid-column: 2;
+			-ms-grid-row: 5;
+		}
+	}
 
 
 
